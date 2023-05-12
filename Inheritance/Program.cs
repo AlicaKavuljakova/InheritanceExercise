@@ -20,6 +20,26 @@ namespace Inheritance
             // give this class 4 members that are specific to Reptile
             // Set this class to inherit from your Animal Class
 
+            var birdie = new Bird();
+            birdie.WingSpanInCm = 150;
+            birdie.CanFly=true; ;
+            birdie.Migrates = true;
+            birdie.EatsBugs = true;
+
+            var croc = new Reptile()
+            {
+                NumberOfLegs = 4,
+                EnvironmentItLivesIn = "swamp",
+                HotOrColdBlooded="cold",
+                HasFeathers=false
+            
+        };
+            var animalArray = new Animal[] {birdie,croc };
+
+foreach(var animal in animalArray)
+            {
+                Console.WriteLine("Has "+animal.NumberOfLegs+" , lives in "+ animal.EnvironmentItLivesIn+" fathers?"+ animal.HasFeathers+" is "+ animal.HotOrColdBlooded+" blooded.");
+            }
 
 
 
